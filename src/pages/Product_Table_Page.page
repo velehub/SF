@@ -1,0 +1,62 @@
+<apex:page controller="ProductTablePageController" sideBar="false">
+    <apex:slds />
+    <apex:form >
+    <h1><b>Product List</b></h1>
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer"> 
+<thead>
+	<tr class="slds-text-title_caps">
+        <th scope="col">
+            <div class="slds-truncate" title="Image">Image</div>
+        </th>
+        <th scope="col">
+            <div class="slds-truncate" title="Product Name">Product Name</div>
+        </th>
+        <th scope="col">
+            <div class="slds-truncate" title="Title">Title</div>
+        </th>
+        <th scope="col">
+            <div class="slds-truncate" title="Description">Description</div>
+        </th>
+        <th scope="col">
+            <div class="slds-truncate" title="Cost">Cost</div>
+        </th>
+        <th scope="col">
+            <div class="slds-truncate" title="Buy"></div>
+        </th>
+	</tr>
+</thead>
+<tbody>
+    <apex:repeat value="{!ProductList}" var="product">
+    <tr>
+        <th scope="row" data-label="Image">
+            <div class="slds-truncate" title="Image"><image src="{!product.Image_URL__c}" /></div>
+        </th>
+        <td data-label="ProductName">
+            <div class="slds-truncate" title="ProductName"><a href="javascript:void(0);">{!product.Name}</a></div>
+        </td>
+        <td data-label="Title">
+            <!-- cuted string -->
+            <div class="slds-cell-wrap" title="Title" style="width: 200px;" >
+               		<apex:outputText value="{!LEFT(product.Product_Description__c, 100)}" />
+            </div> 
+        </td>
+        <td data-label="Description">
+            <div class="slds-cell-wrap" title="Description" style="width: 200px;">
+                <apex:outputText value="{!LEFT(product.Product_Description__c, 100)}" />
+                <a target="_blank" href="/apex/Product_Description_Page?id={!product.Id}">...More</a>
+            </div>
+        </td>
+        <td data-label="Price">
+        	<div class="slds-truncate" title="Cost">{!product.Unit_Price__c}</div>
+        </td>
+        <td data-label="Buy">
+            <!--        	<button class="slds-button slds-button_brand"><a href="javascript:void(0);">Buy</a></button> -->
+            <apex:commandButton action="{!save}" value="Save" id="theButton"/>
+
+        </td>
+   </tr>
+   </apex:repeat>
+</tbody>
+</table>
+</apex:form>
+</apex:page>

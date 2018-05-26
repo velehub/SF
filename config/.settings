@@ -1,0 +1,17 @@
+{
+    "projectName": "VRPtraining",
+    "username": "and_chmel@vrptraining.org",
+    "id": "97b03b10-60e0-11e8-8ae5-394bc5f924ab",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://ap5.salesforce.com",
+    "workspace": "D:\\Documents\\SF",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "StaticResource"
+    ]
+}

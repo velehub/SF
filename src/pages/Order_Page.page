@@ -1,0 +1,56 @@
+<apex:page controller="OrderPageController" sideBar="false">
+    <h1><b>Order here</b></h1>
+    <apex:slds />
+    
+    <div class="slds-form-element">
+  		<label class="slds-form-element__label" for="text-input-id-1">
+    	<abbr class="slds-required" title="required">*</abbr> First Name</label>
+  		<div class="slds-form-element__control" style="width: 300px;">
+    		<input type="text" required="" id="text-input-id-1" class="slds-input" placeholder="Enter First Name" />
+  		</div>
+	</div>
+    <div class="slds-form-element">
+  		<label class="slds-form-element__label" for="text-input-id-1">
+    	<abbr class="slds-required" title="required">*</abbr> Last Name</label>
+  		<div class="slds-form-element__control" style="width: 300px;">
+    		<input type="text" required="" id="text-input-id-1" class="slds-input" placeholder="Enter Last Name" />
+  		</div>
+	</div>
+        <div class="slds-form-element">
+  		<label class="slds-form-element__label" for="text-input-id-1">
+    	<abbr class="slds-required" title="required">*</abbr> Email</label>
+  		<div class="slds-form-element__control" style="width: 300px;">
+    		<input type="text" required="" id="text-input-id-1" class="slds-input" placeholder="Enter Email" />
+  		</div>
+	</div>
+
+	<div class="slds-grid slds-wrap slds-p-vertical_small">
+  		<div class="slds-size_1-of-6">
+			<div class="slds-form-element">
+				<label class="slds-form-element__label" for="text-input-id-1">Product Name</label>
+					<div class="slds-form-element__control">
+						<input type="text" disabled="True" id="text-input-id-1" class="slds-input" placeholder="{!prop01}" />
+					</div>
+			</div>
+		</div>
+       <div class="slds-size_1-of-6">
+			<div class="slds-form-element">
+				<label class="slds-form-element__label" for="text-input-id-1">Unit Count</label>
+					<div class="slds-form-element__control">
+						<input type="text" disabled="" id="text-input-id-1" class="slds-input" placeholder="{!prop01}" />
+					</div>
+			</div>
+		</div>
+        <div class="slds-size_1-of-6">
+			<div class="slds-form-element">
+				<label class="slds-form-element__label" for="text-input-id-1">Total Amount</label>
+					<div class="slds-form-element__control">
+						<input type="text" disabled="True" id="text-input-id-1" class="slds-input" placeholder="{!prop01}" />
+					</div>
+			</div>
+		</div>
+     </div>
+    
+        <button class="slds-button slds-button_brand" style="width: 100px;"><a href="javascript:void(0);">Buy</a></button>
+		<button class="slds-button slds-button_brand" style="width: 100px;"><a href="javascript:void(0);">Cancel</a></button>
+</apex:page>
